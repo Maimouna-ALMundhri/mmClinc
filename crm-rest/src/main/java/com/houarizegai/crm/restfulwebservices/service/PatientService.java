@@ -16,9 +16,9 @@ public class PatientService {
 
     static {
         Patients = new LinkedList<>(Arrays.asList(
-                new Patient(++idCounter, "houari2", new Date(), "2admin@houarizegai.net"),
-                new Patient(++idCounter, "omar2", new Date(), "2omar@houarizegai.net"),
-                new Patient(++idCounter, "fatima2", new Date(), "2fatima@houarizegai.net")
+                new Patient(++idCounter, "houari2", new Date(), "2admin@houarizegai.net","12345678","M"),
+                new Patient(++idCounter, "omar2", new Date(), "2omar@houarizegai.net","12345678","M"),
+                new Patient(++idCounter, "fatima2", new Date(), "2fatima@houarizegai.net","12345678","M")
         ));
     }
 

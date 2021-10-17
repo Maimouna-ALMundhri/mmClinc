@@ -12,16 +12,20 @@ public class Patient {
     private String name;
     private Date birthDate;
     private String email;
+    private String gsm;
+    private String gender;
 
     public Patient() {
 
     }
 
-    public Patient(long id, String name, Date birthDate, String email) {
+    public Patient(long id, String name, Date birthDate, String email, String gsm,String gender) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
         this.email = email;
+        this.gsm=gsm;
+        this.gender=gender;
     }
 
     public Long getId() {
@@ -63,6 +67,24 @@ public class Patient {
                 ", name='" + name + '\'' +
                 ", birthDate=" + birthDate +
                 ", email='" + email + '\'' +
+                ", gsm='" + gsm + '\'' +
+                 ", gender='" + gender + '\'' +
                 '}';
     }
+
+	public String getGsm() {
+		return gsm;
+	}
+
+	public void setGsm(String gsm) {
+		this.gsm = gsm;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 }
