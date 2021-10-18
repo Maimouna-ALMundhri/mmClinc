@@ -3,19 +3,22 @@ package com.houarizegai.crm.restfulwebservices.service;
 import com.houarizegai.crm.restfulwebservices.model.Appointment;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class AppointmentService {
     private static List<Appointment> appointments;
     private static long idCounter = 0;
+    private Logger log;
 
     static {
         appointments = new LinkedList<>(Arrays.asList(
         	
+                new Appointment(++idCounter,10004L, "Ahmed", "eye", "12","12-12-2020","heeelp","12345678","M", "hamdoon"),
                 new Appointment(++idCounter,10004L, "Ahmed", "eye", "12","12-12-2020","heeelp","12345678","M", "hamdoon")
              
         ));
@@ -47,9 +50,23 @@ public class AppointmentService {
         return null;
     }
 
-    public Appointment findById(long id) {
+    public List<Appointment>  findByPatientId(long patientId) {
+    	List<Appointment> patientAppointments = new ArrayList<Appointment>();
+    	  for(Appointment appointment : appointments) {
+    		 
+              if(appointment.getPatientID() == patientId) {
+            	  
+            	  patientAppointments.add(appointment);
+                  
+              }         	
+              
+    	  }
+          return patientAppointments;
+    }
+    
+    public Appointment findById(long patientId) {
         for(Appointment appointment : appointments)
-            if(appointment.getId() == id)
+            if(appointment.getPatientID() == patientId)
                 return appointment;
         return null;
     }

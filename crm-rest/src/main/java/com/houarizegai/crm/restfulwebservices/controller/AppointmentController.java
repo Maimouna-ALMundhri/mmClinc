@@ -29,9 +29,9 @@ public class AppointmentController {
     }
 
     @GetMapping("/users/{username}/appointments/{id}")
-    public Appointment getAppointment(@PathVariable String username, @PathVariable long id) {
-        return appointmentRepository.findById(id).get();
-        // return appointmentService.findById(id);
+    public List<Appointment> getAppointment(@PathVariable String username, @PathVariable long id) {
+        //return appointmentRepository.findById(id).get();
+         return appointmentService.findByPatientId(id);
     }
 
     @PutMapping("/users/{username}/appointments")

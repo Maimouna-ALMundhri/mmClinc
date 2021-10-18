@@ -8,6 +8,6 @@ INSERT INTO patient (id, name, birth_date, email,gsm) VALUES (10003, '2ali', sys
 INSERT INTO patient (id, name, birth_date, email,gsm) VALUES (10004, '3ali', sysdate(), '3ali@houarizegai.net','12345678');
 
 INSERT INTO appointment(id,patientid,patient_name,speciality,age,appointment_dt,msg,gsm,gender,doctor) VALUES (1,10004,'Ahmed','eye','12','12-12-2020','heeelp','12345678','M','hamdoon');
-
-
+INSERT INTO appointment(id,patientid,patient_name,speciality,age,appointment_dt,msg,gsm,gender,doctor) VALUES (2,10004,'Ahmed','eye','12','12-12-2020','heeelp','12345678','M','hamdoon');
+INSERT INTO appointment(id,patientid,patient_name,speciality,age,appointment_dt,msg,gsm,gender,doctor) VALUES (3,10004,'Ahmed','eye','12','12-12-2020','heeelp','12345678','M','hamdoon');
 
